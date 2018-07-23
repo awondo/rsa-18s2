@@ -11,3 +11,16 @@ git clone -b 18s2 --single-branch git@robolab.cse.unsw.edu.au:addo/comp3431-rsa.
 
 git clone -b rsa-18s2 --single-branch git@robolab.cse.unsw.edu.au:rescue/crosbot.git
 
+echo "Attempting to build new packages"
+cd ~/catkin_ws && catkin_make
+
+echo "Installing SLAM cartographer package"
+sudo apt-get --assume-yes install ros-kinetic-cartographer ros-kinetic-cartographer-ros ros-kinetic-cartographer-ros-msgs ros-kinetic-cartographer-rviz
+
+echo "Adding turtlebot model to bashrc"
+echo "export TURTLEBOT3_MODEL=waffle" >> ~/.bashrc
+
+# Yeah typing this gets annoying
+echo 'alias turtlebot-rviz="rosrun rviz rviz -d `rospack find turtlebot3_description`/rviz/model.rviz" ' >> ~/.bashrc
+
+echo "Done!"

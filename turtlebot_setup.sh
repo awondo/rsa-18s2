@@ -13,7 +13,6 @@ sudo apt-get --assume-yes ros-kinetic-rosserial-python ros-kinetic-tf
 cd ~/catkin_ws && catkin_make
 
 echo "Adding turtlebot model to bashrc"
-
 echo "export TURTLEBOT3_MODEL=waffle" >> ~/.bashrc
 
 echo "Done!"
