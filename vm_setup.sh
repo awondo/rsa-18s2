@@ -7,9 +7,12 @@ echo "You might be promted for sudo access. The password is rsa"
 
 echo "Cloning additional repos"
 cd ~/catkin_ws/src
-git clone -b 18s2 --single-branch git@robolab.cse.unsw.edu.au:addo/comp3431-rsa.git
+git clone -b 18s2 --single-branch http://robolab.cse.unsw.edu.au:4443/comp3431-rsa/comp3431-rsa.git
+git clone -b rsa-18s2 --single-branch http://robolab.cse.unsw.edu.au:4443/rescue/crosbot.git
 
-git clone -b rsa-18s2 --single-branch git@robolab.cse.unsw.edu.au:rescue/crosbot.git
+echo "Download new packages"
+sudo apt-get update
+sudo apt-get --assume-yes install libnewmat10-dev
 
 echo "Attempting to build new packages"
 cd ~/catkin_ws && catkin_make
