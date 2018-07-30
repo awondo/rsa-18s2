@@ -4,6 +4,11 @@
 
 echo "Turtlebot 3 Setup"
 echo "You might be promted for sudo access. The password is rsa"
+
+cd ~/catkin_ws/src
+git clone https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
 echo "Removing Remove PC packages. These are not designed to run on turtlebots."
 cd ~/catkin_ws/src/turtlebot3
 sudo rm -r turtlebot3_description/ turtlebot3_teleop/ turtlebot3_navigation/ turtlebot3_slam/ turtlebot3_example/
