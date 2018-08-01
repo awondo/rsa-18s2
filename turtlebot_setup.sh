@@ -14,7 +14,7 @@ cd ~/catkin_ws/src/turtlebot3
 sudo rm -r turtlebot3_description/ turtlebot3_teleop/ turtlebot3_navigation/ turtlebot3_slam/ turtlebot3_example/
 
 echo "Installing additional packages"
-sudo apt-get --assume-yes openssh-server ros-kinetic-rosserial-python ros-kinetic-tf
+sudo apt-get --assume-yes install openssh-server ros-kinetic-rosserial-python ros-kinetic-tf
 cd ~/catkin_ws && catkin_make
 
 echo "Adding turtlebot model to bashrc"
